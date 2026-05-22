@@ -4,7 +4,7 @@ import mysql.connector
 conn_obj=mysql.connector.connect(
     host="localhost",user="root",database="api_crud",password="Keerthi@425"
 )
-curser_obj=conn_obj.cursor()
+curser_obj=conn_obj.cursor(dictionary=True)
 app=FastAPI() # object of FastAPI
 
 @app.post("/add_worker") #api backend
